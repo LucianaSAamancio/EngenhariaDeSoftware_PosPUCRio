@@ -5,4 +5,4 @@ Maiores informações sobre a pós-graduação em: https://especializacao.ccec.p
 
 **Sprint 0 - Sprint de Transição**
    
-   <u>**Aula 01** -> Criação do Jogo completo Whac-A-Mole construído apenas usando HTML e imagens<u>
+   <u>**Aula 01** -> Criação do Jogo completo Whac-A-Mole construído apenas usando HTML e imagens</u>
