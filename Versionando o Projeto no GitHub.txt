@@ -1,0 +1,101 @@
+1 - Abrir o git iterminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
+$ cd C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto
+
+2 - Iniciar um repositório git na pasta do projeto 
+$ git init
+
+3 - Associar o Projeto Local com o repositório remoto do GitHub
+$ git remote add origin https://github.com/LucianaAmancio/SistemaDeJogoXadrez_CursoUdemyJavaCompleto.git
+
+$ git remote add origin https://github.com/LucianaSAamancio/Automatizado_SeleniumJava.git
+
+4 - Atualizar o projeto local em relação ao projeto remoto
+$ git branch -m main
+$ git pull origin main
+
+5 - Verificar o status
+$ git status
+
+6 - Confirmar se o usuário está correto
+$ git config --list
+
+Validar se está assim:
+user.email=luciana.da.silva.abreu.amancio@hotmail.com (do GitHub)
+user.name=LucianaAmancio
+
+7 - Comandos para criar os arquivos locais no repositório do GitHub
+$ git add .
+$ git commit -m "Projeto criado."
+
+8 - Subir para o repositório os arquivos
+git push -u origin main
+
+9 - Será aberto uma nova tela solicitando aprovação e autenticação. Validar via browser aceitando.
+
+------------------------------------------------------------------------
+
+PARA SUBIR APÓS A PRIMEIRA CONEXÃO COM O GITHUB
+
+1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
+$ cd C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto
+
+2 - Verificar o status
+$ git status
+
+3 - Comandos para criar os arquivos locais no repositório do GitHub
+$ git add .
+$ git commit -m " "
+
+4 - Subir para o repositório os arquivos
+$ git push 
+
+------------------------------------------------------------------------
+
+RODAR O PROJETO PELA PASTA BIN A PARTIR DE AGORA DEVIDO ALTERAÇÕES REALIZADAS NO DIA 14/09/2024
+
+1 - Abrir um terminal Git Bash na pasta bin do projeto
+C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto\bin
+
+$ java application/Program
+
+2 - Comandos para criar os arquivos locais no repositório do GitHub
+$ git add .
+$ git commit -m "[colocar um texto descrevendo as alterações realizadas"
+
+3 - Subir para o repositório os arquivos
+$ git push 
+
+
+Colocar o link para o projeto original do professor em 
+https://github.com/acenelio/chess-system-java
+
+ Imprimindo os movimentos possíveis
+
+//Verifica se existem alterações 
+$ git status
+
+// Adiciona  os arquivos locais alterados no repositório do GitHub
+$ git add .
+$ git commit -m "[colocar um texto descrevendo as alterações realizadas"
+
+// Sobe os arquivos alterados para o respositório no GitHub
+$ git push 
+
+
+-----------------------------------------------------------------------------------
+Verificar como fazer para passar a utilizar
+
+Aprendi que um bom histórico de commits facilita, logo sigo um padrão que ajuda a manter tudo organizado e claro. Vi esse padrão em um post no LinkedIn que citava o blog da Rocketseat. 
+
+Estes são alguns tipos e quando usá-los:
+
+✅ feat→ Quando adicionamos um novo recurso ao código. 
+🐛 fix→ Para corrigir um bug. 
+🎨 style→ Alterações que não afetam a lógica do código (formatação, espaços, etc.). 
+🔄 refactor→ Refatoração sem mudança de comportamento ou correção de bug. 
+🧪 test→ Adicionando ou corrigindo testes. 
+📄 docs→ Mudanças apenas na documentação. 
+🛠 chore→ Atualizações de ferramentas, dependências ou scripts auxiliares. 
+⚡ perf→ Melhorias de desempenho. 
+🏗 build→ Mudanças no sistema de build ou dependências. 
+🔧 ci→ Alterações em scripts de integração contínua.
