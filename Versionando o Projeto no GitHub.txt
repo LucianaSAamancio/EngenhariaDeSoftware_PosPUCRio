@@ -56,7 +56,6 @@ RODAR O PROJETO PELA PASTA BIN A PARTIR DAS ALTERAÇÕES REALIZADAS APÓS SUBIR 
 $ cd C:\EngenhariaDeSoftware_PosPUCRio
 
 2 - Atualizar o projeto local em relação ao projeto remoto
-$ git branch -m main
 $ git pull origin main
 
 3 - Comandos para criar os arquivos locais no repositório do GitHub
@@ -79,3 +78,8 @@ Estes são alguns tipos e quando usá-los:
 ⚡ perf→ Melhorias de desempenho. 
 🏗 build→ Mudanças no sistema de build ou dependências. 
 🔧 ci→ Alterações em scripts de integração contínua.
+
+
+Sou sua aluna na Pós-graduação de Engenharia de Software da PUC Rio. 
+
+Poderia, por favor,  me adicionar a sua rede no linkedin.
