@@ -1,0 +1,25 @@
+SQLite 3 
+
+1) Comando para criar um banco de dados no sqlite3: Digite sqlite3 <nome_do_banco>.db e pressione Enter. Substitua <nome_do_banco> pelo nome desejado para o seu banco de dados (ex: meubanco.db).
+Exemplo: sqlite3 meu_banco.db
+
+sqlite3 PosGraducaoEGSPucRio.db
+
+2) Comando para abrir um banco de dados criado no sqlite3
+
+sqlite3 PosGraducaoEGSPucRio.db
+
+3) Comando para criar as tabelas no banco de dados criado no sqlite3
+
+.read IntroducaoBancoDeDados_Aula02_ExercicioModeloFisico_V04.sql
+
+4) Comando para verificar se a Tabela foi criada
+
+.schema Proprietário
+.schema Imovel
+.schema Locatario
+.schema Endereco
+.schema CEP_Correios
+.schema Avaliacao
+.schema Aluga
+.schema Observacao

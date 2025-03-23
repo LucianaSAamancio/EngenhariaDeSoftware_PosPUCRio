@@ -1,6 +1,6 @@
 PARA SUBIR OS ARQUIVOS PARA O GITHUB PELA PRIMEIRA VEZ
 
-1 - Abrir o tgiterminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
+1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
 $ cd C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto
 
 2 - Iniciar um repositório git na pasta do projeto 
@@ -79,6 +79,35 @@ Estes são alguns tipos e quando usá-los:
 🏗 build→ Mudanças no sistema de build ou dependências. 
 🔧 ci→ Alterações em scripts de integração contínua.
 
+---------------------------------------------------------------------------------------
+
+Excluir através da linha de comando (Git):
+
+1 - Remova localmente:
+Arquivo: git rm <nome_do_arquivo>.
+Diretório: git rm -r <nome_do_diretorio>.
+
+2 - Faça commit: git commit -m "Mensagem descrevendo a exclusão".
+
+3 - Envie para o repositório remoto: git push origin <nome_do_branch>
+
+--------------------------------------------------------------------------------
+
+Excluir através da linha de comando (Git):
+
+1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
+$ cd C:\EngenhariaDeSoftware_PosPUCRio\Sprint0_SprintDeTransicao
+
+2 - Digitar o comando para excluir o diretório desejado
+$ git rm -r introducao-a-banco-de-dados
+
+3 -  Faça commit
+$ git commit -m "Exclusão do diretório."
+
+4 - Subir as alterações para o repositório
+$ git push
+
+---------------------------------------------------------------------------------------
 
 Sou sua aluna na Pós-graduação de Engenharia de Software da PUC Rio. 
 
