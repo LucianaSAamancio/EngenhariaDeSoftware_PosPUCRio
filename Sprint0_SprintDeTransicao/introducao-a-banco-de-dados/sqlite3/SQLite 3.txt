@@ -1,5 +1,7 @@
 SQLite 3 
 
+Todos os arquivos devem estar na pasta do SQLite 3 para funcionar os comandos referentes a leitura e importação de arquivos para o banco de dados (Vide imagem SQLite3_pasta.png)
+
 1) Comando para criar um banco de dados no sqlite3: Digite sqlite3 <nome_do_banco>.db e pressione Enter. Substitua <nome_do_banco> pelo nome desejado para o seu banco de dados (ex: meubanco.db).
 Exemplo: sqlite3 meu_banco.db
 
@@ -15,7 +17,7 @@ sqlite3 PosGraducaoEGSPucRio.db
 
 4) Comando para verificar se a Tabela foi criada
 
-.schema Proprietário
+.schema Proprietario
 .schema Imovel
 .schema Locatario
 .schema Endereco
@@ -23,3 +25,11 @@ sqlite3 PosGraducaoEGSPucRio.db
 .schema Avaliacao
 .schema Aluga
 .schema Observacao
+
+5) Comandos utilizados para importar um arquivo
+
+.schema Proprietario 
+.separator ','
+.import Aula03Teste.csv Proprietário
+
+select count(CPF_Proprietario) from Proprietario;

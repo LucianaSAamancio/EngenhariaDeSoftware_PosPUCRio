@@ -74,6 +74,8 @@ WHERE Estado = 'RJ';
 /* Delete sem cláusula WHERE - deleta toda a tabela */
 DELETE FROM CEP_CORREIOS;
 
+/* Delete deleta a tabela */
+DROP TABLE  CEP_COPIA;
 
 
 

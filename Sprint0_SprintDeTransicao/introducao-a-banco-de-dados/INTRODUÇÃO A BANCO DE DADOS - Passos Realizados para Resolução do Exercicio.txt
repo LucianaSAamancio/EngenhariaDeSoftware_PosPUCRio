@@ -9,11 +9,13 @@ Passos realizados para Resolução do Exercício Plataforma de aluguel de imóve
 
 3 - Utilizando o brModelo: Diagrama -> Comandos -> Converter para lógico. Foi feita a criação do Modelo Lógico a partir do DER criado no passo 1 dessa lista; 
 
-4 -  Utilizando o brModelo: Diagrama -> Comandos -> Editar tipos. Foi feita classificação dos Tipos de campos conforme definição documentada na coluna "Domínioo de valores válidos" do Dicionário de Dados do DER e Modelo Lógico criado para Plataforma de aluguel de imóvel por temporada;
+4 -  Utilizando o brModelo: Diagrama -> Comandos -> Editar tipos. Foi feita classificação dos Tipos de campos conforme definição documentada na coluna "Domínio de valores válidos" do Dicionário de Dados do DER e Modelo Lógico criado para Plataforma de aluguel de imóvel por temporada;
 
 5 - Utilizando o brModelo: Diagrama -> Comandos -> Converter para físico. Foi feita a criação do Modelo Físico referente ao Modelo Lógico criado no passo 3 dessa lista. 
 
 6 - Utilizando o Notepad++ foram feitos os ajustes necessários para as chaves estrangeiras no script gerado para o Modelo Físico no brModelo. 
+
+7 - Se souber incluir o tamanho necessário para os tipos Int e Varchar.
 
 7 - No prompt de comando na pasta do sqlite3 foram executados os comandos abaixo:
 
@@ -21,7 +23,7 @@ Passos realizados para Resolução do Exercício Plataforma de aluguel de imóve
 sqlite3 PosGraducaoEGSPucRio.db
 
 /* Comando para criar as tabelas no banco de dados criado no sqlite3 */
-.read IntroducaoBancoDeDados_Aula02_ExercicioModeloFisico_V04.sql
+.read IntroducaoBancoDeDados_Aula02_ExercicioModeloFisico_V05.sql
 
 /* Comando para v.schema Imovelerificar se a Tabela foi criada */
 .schema Proprietario
@@ -37,12 +39,40 @@ sqlite3 PosGraducaoEGSPucRio.db
 
 A) comandos de manipulação de dados nas tabelas usando as instruções DML: INSERT, UPDATE e DELETE;
 B) comandos SELECT para verificar os dados das tabelas antes e depois da manipulação;
+
 Itens 8-A e 8-B registrados no arquivo: IntroducaoBancoDeDados_Aula03_DML_INSERT_UPDATE_DELETE_SELECT.sql
 
 C) gerar um arquivo CSV com, pelo menos, 20 linhas e carregá-lo em uma das tabelas do banco de dados de sua escolha.
 
+	* Colocar o arquivo csv criado na pasta do sqlite3.  
+	* Abrir o pront de comando na pasta do sqlite3.
+	* Digitar os comandos abaixo no prompt de comando:
+
+		.schema Proprietario 
+		.separator ','
+		.import Aula03Teste.csv Proprietário
+
+	*Comandos utilizados para validar a importação dos dados do arquivo para tabela
+		select count(CPF_Proprietario) from Proprietario;
+		select * from Proprietario;
+
+
 D) Além disso, você deverá criar uma visão para dados pessoais do locatário e outra para dados pessoais do proprietário, formatando a data de nascimento com o padrão DD/MM/YYYY, bem como um índice para o atributo situação na tabela que representa o relacionamento de alugar.
 
+CREATE VIEW DADOS_PESSOAIS_LOCATARIO AS 
+SELECT CPF_Locatario, Nome_completo,  E_mail, strftime('%d/%m/%y', Data_de_nascimento) 
+FROM Locatario;
+
+SELECT * FROM DADOS_PESSOAIS_LOCATARIO;
+
+CREATE VIEW DADOS_PESSOAIS_PROPRIETARIO AS
+SELECT CPF_Proprietario, Nome_completo,  E_mail, strftime('%d/%m/%y', Data_de_nascimento) 
+from Proprietario;
+
+SELECT * FROM DADOS_PESSOAIS_PROPRIETARIO;
+
+CREATE INDEX IDX_SITUACAO_ALUGA  ON Aluga(Situação);
+
 ---> OBSERVAÇÕES
----> FALTA REPLICAR OS ITENS PARA AS DEMAIS TABELAS 
----> FALTA FAZER OS ITENS 8-C e 8-D 
+---> FALTA REPLICAR OS ITENS 8-A, 8-B e 8-C PARA AS DEMAIS TABELAS 
+---> Falta fazer o ajuste na view para exibir o campo data de nascimento com a formatação dd/mm/aaaa

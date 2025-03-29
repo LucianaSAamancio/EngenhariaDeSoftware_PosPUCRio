@@ -96,7 +96,8 @@ Diretório: git rm -r <nome_do_diretorio>.
 Excluir através da linha de comando (Git):
 
 1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
-$ cd C:\EngenhariaDeSoftware_PosPUCRio\Sprint0_SprintDeTransicao
+$ cd C:\EngenhariaDeSoftware_PosPUCRio
+$ cd ..
 
 2 - Digitar o comando para excluir o diretório desejado
 $ git rm -r introducao-a-banco-de-dados

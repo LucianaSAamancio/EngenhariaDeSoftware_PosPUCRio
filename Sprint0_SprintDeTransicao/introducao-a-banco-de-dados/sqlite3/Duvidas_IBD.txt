@@ -1,0 +1,21 @@
+DÚVIDAS ENCONTRO 27/03/2025
+
+1 - Verificar se o DER e o Modelo Lógico está certo. (Está pronto falta poucos ajustes! Vide aula do dia 27/03/2025) 
+
+2 - Verificar se o Dicionário de Dados está correto e Tirar as dúvidas sinalizadas nele. (Não consegui falar com a professora sobre essa dúvida, mas tudo sem não tem muita importância)
+
+3 - Não estou conseguindo prosseguir com a importação para Tabela. (Ok - Problema resolvido na aula era falta de ;)
+
+
+ESCLARECIMENTOS REALIZADOS NO ENCONTRO DIA 27032025
+
+Se der tempo:
+	* Colocar no modelo físico as regras de obrigatório sinalizando com not null
+	* Incluir algumas restrições nas colunas das tabelas de acordo com a regra do sistema e dos Tipos de restrições página 78 do material
+	* Valor default do status do imóvel Disponível
+	* No Modelo Físico é possível colocar as regras. Exemplo: data de nascimento é para usar uma trigger 
+
+É uma boa prática incluir as regras dentro do banco de dados, porém em alguns casos isso é custoso. Pode onerar o sistema. Se a regra mudar que está no banco vai ter que verificar o impacto. Garantindo que o antigo funcione e o nome seja incluído.
+
+Nova regra para o CNPJ com números e letras
+
