@@ -1,7 +1,7 @@
 PARA SUBIR OS ARQUIVOS PARA O GITHUB PELA PRIMEIRA VEZ
 
 1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
-$ cd C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto
+$ cd C:\EngenhariaDeSoftware_PosPUCRio
 
 2 - Iniciar um repositório git na pasta do projeto 
 $ git init
@@ -35,10 +35,10 @@ git push -u origin main
 9 - Será aberto uma nova tela solicitando aprovação e autenticação. Validar via browser aceitando.
 
 ------------------------------------------------------------------------
- MODELO GENÉRICO -> PARA SUBIR APÓS A PRIMEIRA CONEXÃO COM O GITHUB
+ MODELO --> PARA SUBIR APÓS A PRIMEIRA CONEXÃO COM O GITHUB
 
 1 - Abrir o terminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
-$ cd C:\SistemaDeJogoXadrez_CursoUdemyJavaCompleto
+$ cd C:\EngenhariaDeSoftware_PosPUCRio
 
 2 - Verificar o status
 $ git status
@@ -49,22 +49,10 @@ $ git commit -m " "
 
 4 - Subir para o repositório os arquivos
 $ git push 
-------------------------------------------------------------------------
-RODAR O PROJETO PELA PASTA BIN A PARTIR DAS ALTERAÇÕES REALIZADAS APÓS SUBIR OS ARQUIVOS PARA O GIT PELA PRIMEIRA VEZ
- 
-1 - Abrir o tgiterminal do Gitbash e digitar e entrar na pasta que deseja versionar o código 
-$ cd C:\EngenhariaDeSoftware_PosPUCRio
 
-2 - Atualizar o projeto local em relação ao projeto remoto
-$ git pull origin main
-
-3 - Comandos para criar os arquivos locais no repositório do GitHub
-$ git add .
-$ git commit -m "Criação do tabuleiro e da página de recordes."
-
-4 - Subir para o repositório os arquivos
-$ git push
 -----------------------------------------------------------------------------------
+ <--- ORGANIZAR COMMITS -  Verificar como utilizar na prática --> 
+
 Aprendi que um bom histórico de commits facilita, logo sigo um padrão que ajuda a manter tudo organizado e claro. Vi esse padrão em um post no LinkedIn que citava o blog da Rocketseat. 
 
 Estes são alguns tipos e quando usá-los:
@@ -81,7 +69,7 @@ Estes são alguns tipos e quando usá-los:
 
 ---------------------------------------------------------------------------------------
 
-Excluir através da linha de comando (Git):
+ MODELO GENÉRICO --> Excluir através da linha de comando (Git):
 
 1 - Remova localmente:
 Arquivo: git rm <nome_do_arquivo>.
@@ -110,6 +98,3 @@ $ git push
 
 ---------------------------------------------------------------------------------------
 
-Sou sua aluna na Pós-graduação de Engenharia de Software da PUC Rio. 
-
-Poderia, por favor,  me adicionar a sua rede no linkedin.
