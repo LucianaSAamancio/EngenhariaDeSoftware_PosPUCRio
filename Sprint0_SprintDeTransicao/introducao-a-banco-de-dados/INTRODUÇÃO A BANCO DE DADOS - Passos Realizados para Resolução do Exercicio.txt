@@ -76,3 +76,26 @@ CREATE INDEX IDX_SITUACAO_ALUGA  ON Aluga(Situação);
 ---> OBSERVAÇÕES
 ---> FALTA REPLICAR OS ITENS 8-A, 8-B e 8-C PARA AS DEMAIS TABELAS 
 ---> Falta fazer o ajuste na view para exibir o campo data de nascimento com a formatação dd/mm/aaaa
+
+
+---> 
+neste link achei uma explicação bem detalhada de como o sqlite trata informações de data. 
+
+https://internotes.net/sqlite-dates
+
+Eu fiz uma adaptação dos testes que o autor apresenta, veja qual caso se aplica a forma como vc inseriu os dados: 
+
+CREATE TABLE dates (
+    iso TEXT,
+    julian REAL,
+    epoch INT, 
+    data DATE
+);
+
+insert into dates values ('1990-01-01', 2447892.500000, 631152000000, '1990/01/01');
+
+select strftime('%d/%m/%Y',iso), strftime('%d/%m/%Y',julian), strftime('%d/%m/%Y',epoch), strftime('%d/%m/%Y', data) from dates;
+
+select (SUBSTR(CAST(DATA AS TEXT),9,2)  '/'  SUBSTR(CAST(DATA AS TEXT),6,2)  '/'  SUBSTR(CAST(DATA AS TEXT),1,4)) AS data_formatada 
+from dates;
+Internotes — Working With SQLite Dates
