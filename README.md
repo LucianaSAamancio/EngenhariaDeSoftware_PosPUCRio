@@ -11,6 +11,7 @@ Maiores informações sobre a pós-graduação em: https://especializacao.ccec.p
     <ul><b>Aula 03</b> -> Strings, recursão e listas </ul>
    
     Material de Referência e Apoio: 
+    
     https://github.com/dipucriodigital/engenharia-de-software/tree/main/introducao-a-programacao-com-python
 
 **Introdução à Construção de Páginas da Web (Professor Alexandre Meslin)**
