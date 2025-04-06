@@ -18,7 +18,7 @@ Maiores informações sobre a pós-graduação em: https://especializacao.ccec.p
     <ul><b>Aula 02</b> -> Folhas de estilo com CSS e responsividade - Criação das Folhas de estilo com CSS e responsividade para o Jogo completo Whac-A-Mole </ul>
     <ul><b>Aula 03</b> -> Javascript - Finalização do Jogo completo Whac-A-Mole com Javascript </ul>
 
-    Material de Referência e Apoio:  
+    <p>Material de Referência e Apoio:<p/>
     https://github.com/dipucriodigital/engenharia-de-software/tree/main/introducao-a-criacao-de-paginas-web
 
 **Introducao a Banco de dados(Professora Veronica dos Santos)**
