@@ -4,12 +4,12 @@ CREATE TABLE Proprietario (
     CPF_Proprietario VARCHAR(11) PRIMARY KEY,
     Nome_completo VARCHAR(100),
     Data_de_nascimento DATE,
-    Telefone_celular INT(10),
+    Telefone_celular INT(12),
     E_mail VARCHAR(100)
 );
 
 CREATE TABLE Imovel (
-    ID_Imovel INT,
+    ID_Imovel INT NOT NULL PRIMARY KEY,
     fk_Endereco_Endereco_PK INT,
     fk_Avaliacao_Avaliacao_PK INT,
     Informacoes_Adicionais VARCHAR(500),
@@ -28,7 +28,7 @@ CREATE TABLE Imovel (
 
 CREATE TABLE Endereco (
     Endereco_PK INT NOT NULL PRIMARY KEY,
-    CEP INT(8),
+    CEP INT(10),
     Logradouro VARCHAR(100),
     EnderecoNumero INT,
     EnderecoComplemento VARCHAR(50), 
@@ -48,7 +48,7 @@ CREATE TABLE CEP_Correios (
 CREATE TABLE Avaliacao (
     Avaliacao_PK INT NOT NULL PRIMARY KEY,
     Autor VARCHAR(100),
-    Data DATE,
+    Data_Avaliacao DATE,
     Texto VARCHAR(500),
     ID_Imovel INT
 );
@@ -57,7 +57,7 @@ CREATE TABLE Locatario (
     CPF_Locatario VARCHAR(11) PRIMARY KEY,
     Nome_completo VARCHAR(100),
     Data_de_nascimento DATE,
-    Telefone_celular INT(10),
+    Telefone_celular INT(12),
     E_mail VARCHAR(100)
 );
 
@@ -78,6 +78,7 @@ CREATE TABLE Aluga (
 );
 
 CREATE TABLE Observacao (
+    
     Observacao_PK INT NOT NULL PRIMARY KEY,
     fk_Locatario_CPF INT(11),
     ID_Imovel INT,

@@ -50,36 +50,94 @@ C) gerar um arquivo CSV com, pelo menos, 20 linhas e carregá-lo em uma das tabe
 
 		.schema Proprietario 
 		.separator ','
-		.import Aula03Teste.csv Proprietário
-
+		.import Proprietario.csv Proprietario
+		
 	*Comandos utilizados para validar a importação dos dados do arquivo para tabela
 		select count(CPF_Proprietario) from Proprietario;
 		select * from Proprietario;
 
-
 D) Além disso, você deverá criar uma visão para dados pessoais do locatário e outra para dados pessoais do proprietário, formatando a data de nascimento com o padrão DD/MM/YYYY, bem como um índice para o atributo situação na tabela que representa o relacionamento de alugar.
 
 CREATE VIEW DADOS_PESSOAIS_LOCATARIO AS 
-SELECT CPF_Locatario, Nome_completo,  E_mail, strftime('%d/%m/%y', Data_de_nascimento) 
+SELECT CPF_Locatario, Nome_completo,  E_mail, strftime('%d/%m/%Y', Data_de_nascimento) AS DataDeNascimento_formatada 
 FROM Locatario;
 
 SELECT * FROM DADOS_PESSOAIS_LOCATARIO;
 
-CREATE VIEW DADOS_PESSOAIS_PROPRIETARIO AS
-SELECT CPF_Proprietario, Nome_completo,  E_mail, strftime('%d/%m/%y', Data_de_nascimento) 
+CREATE VIEW DADOS_PESSOAIS_PROPRIETARIO3 AS
+SELECT CPF_Proprietario, Nome_completo,  E_mail, strftime('%d/%m/%Y', Data_de_nascimento) AS DataDeNascimento_formatada  
 from Proprietario;
 
 SELECT * FROM DADOS_PESSOAIS_PROPRIETARIO;
 
-CREATE INDEX IDX_SITUACAO_ALUGA  ON Aluga(Situação);
+CREATE INDEX IDX_SITUACAO_ALUGA  ON Aluga(Situacao);
 
----> OBSERVAÇÕES
----> FALTA REPLICAR OS ITENS 8-A, 8-B e 8-C PARA AS DEMAIS TABELAS 
----> Falta fazer o ajuste na view para exibir o campo data de nascimento com a formatação dd/mm/aaaa
+-------------------------------------------------------------------------------
+
+CRIACAO DE DADOS NAS OUTRAS TABELAS UTILIZANO O IMPORT
+
+-->
+.schema Imovel
+.separator ','
+.import Imovel.csv Imovel
+
+select count(ID_Imovel) from Imovel;
+select * from Imovel;
+
+-->
+.schema Locatario
+.separator ','
+.import Locatario.csv Locatario
+
+select count(CPF_Locatario) from Locatario;
+select * from Locatario;
+
+-->
+.schema Endereco
+.separator ','
+.import Endereco.csv Endereco
+
+select count(Endereco_PK) from Endereco;
+select * from Endereco;
+
+-->
+.schema CEP_Correios
+.separator ','
+.import CEP_Correios.csv CEP_Correios
+
+select count(CEP) from CEP_Correios;
+select * from CEP_Correios;
+
+-->
+.schema Avaliacao
+.separator ','
+.import Avaliacao.csv Avaliacao
+
+select count(Avaliacao_PK) from Avaliacao;
+select * from Avaliacao;
+
+-->
+.schema Aluga
+.separator ','
+.import Aluga.csv Aluga
+
+select count(ID_Imovel) from Aluga;
+select * from Aluga;
+
+-->
+.schema Observacao
+.separator ','
+.import Observacao.csv Observacao
+
+select count() from Observacao;
+select * from Observacao;
 
 
----> 
-neste link achei uma explicação bem detalhada de como o sqlite trata informações de data. 
+-------------------------------------------------------------------------------
+
+---> Ajuda da professora Veronica
+
+Neste link achei uma explicação bem detalhada de como o sqlite trata informações de data. 
 
 https://internotes.net/sqlite-dates
 
@@ -98,4 +156,18 @@ select strftime('%d/%m/%Y',iso), strftime('%d/%m/%Y',julian), strftime('%d/%m/%Y
 
 select (SUBSTR(CAST(DATA AS TEXT),9,2)  '/'  SUBSTR(CAST(DATA AS TEXT),6,2)  '/'  SUBSTR(CAST(DATA AS TEXT),1,4)) AS data_formatada 
 from dates;
-Internotes — Working With SQLite Dates
+
+-------------------------------------------------------------------------------
+
+---> SOLUÇÃO PARA O PROBLEMA COM A FORMATAÇÃO DO CAMPO Data_de_nascimento NA VIEW 
+
+Problema não estava conseguindo exibir o campo Data_de_nascimento formatado com o strftime porque o campo criado na view estava vindo como vazia, pois a coluna Data_de_nascimento já se encontrava no formato "dd/mm/aaaa" na tabela. 
+Após identificar esse problema e alterar a data para o formato aaaa-mm-dd a view realizou a formatação do campo e exibiu a data formata na coluna  DataDeNascimento_formatada. 
+
+
+
+
+
+
+
+

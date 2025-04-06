@@ -71,11 +71,20 @@ DELETE
 FROM CEP_CORREIOS
 WHERE Estado = 'RJ';
 
-/* Delete sem cláusula WHERE - deleta toda a tabela */
+/* Delete sem cláusula WHERE - deleta toda a tabela inclusive a tabela*/
 DELETE FROM CEP_CORREIOS;
 
-/* Delete deleta a tabela */
 DROP TABLE  CEP_COPIA;
+
+
+DROP TABLE  Proprietario;
+DROP TABLE  Imovel;
+DROP TABLE  Locatario;
+DROP TABLE  Endereco;
+DROP TABLE  CEP_Correios;
+DROP TABLE  Avaliacao;
+DROP TABLE  Aluga;
+DROP TABLE  Observacao;
 
 
 
